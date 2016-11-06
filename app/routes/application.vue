@@ -5,63 +5,53 @@
     <h2>Sign Up For My Web App</h2>
     </div>
     <div class="panel-block">
-        <label class="label">First Name</label>
       <p class="control">
-          <input class="input" type="text" placeholder="Text input">
+        <input class="input" placeholder="First Name"></input>
+      </p>
+    </div>
+    <div class="panel-block">
+      <p class="control">
+        <input class="input" placeholder="Last Name"></input>
+      </p>
+    </div>
+    <div class="panel-block">
+      <p class="control">
+        <input class="input" placeholder="Email Address"></input>
+      </p>
+    </div>
+    <div class="panel-block">
+      <p class="control">
+        <input class="input" placeholder="Current website url"></input>
       </p>
     </div>
       <div class="panel-block">
-        <label class="label">Last Name</label>
-        <p class="control has-icon has-icon-right">
-            <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-            <i class="fa fa-check"></i>
-            <span class="help is-success">This username is available</span>
-        </p>
-      </div>
-      <div class="panel-block">
-        <label class="label">Email Address</label>
-        <p class="control has-icon has-icon-right">
-            <input class="input is-danger" type="text" placeholder="Email input" value="hello@">
-            <i class="fa fa-warning"></i>
-            <span class="help is-danger">This email is invalid</span>
-        </p>
-      </div>
-      <div class="panel-block">
-        <label class="label">Subject</label>
         <p class="control">
-            <span class="select">
+            <span class="select is-fullwidth">
         <select>
-          <option>Select dropdown</option>
-          <option>With options</option>
+          <option>English</option>
+          <option>Spanish</option>
         </select>
             </span>
         </p>
       </div>
       <div class="panel-block">
-        <label class="label">Message</label>
         <p class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <textarea class="textarea" placeholder="Your Comment"></textarea>
+        </p>
+      </div>
+      <div class="panel-block">
+        <p class="control">
+          <input class="input" placeholder="Mobile Number"></input>
+        </p>
+      </div>
+      <div class="panel-block">
+        <p class="control">
+          <input class="input" placeholder="Home Number"></input>
         </p>
       </div>
       <p class="control">
-    <label class="checkbox">
-      <input type="checkbox">
-      Remember me
-    </label>
-      </p>
-      <p class="control">
-    <label class="radio">
-      <input type="radio" name="question">
-      Yes
-    </label>
-    <label class="radio">
-      <input type="radio" name="question">
-      No
-    </label>
-      </p>
-      <p class="control">
     <button class="button is-primary is-fullwidth">Submit</button>
-    <button class="button is-link is-fullwidth">Cancel</button>
+    <button class="button is-fullwidth">Cancel</button>
       </p>
       </nav>
   </div>
