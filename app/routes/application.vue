@@ -16,12 +16,28 @@
 </template>
 
 <script>
+const apiUrl = 'http://json-data.herokuapp.com/forms';
+
 export default {
   data() {
-    return {};
+    return {
+      formInputs: [],
+      formValues: [],
+      apiUrl,
+    };
   },
 
   methods: {
+    getData () {
+      fetch('apiUrl') {
+        .then((r) => r.json())
+        .then((formInputs) => {
+          this.formInputs = formInputs;
+        });
+      },
+    },
+
+    submitForm() {},
 
   },
 };
