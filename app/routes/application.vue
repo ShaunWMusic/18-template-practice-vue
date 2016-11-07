@@ -7,9 +7,10 @@
     </div>
     <div class="panel-block">
       <p class="control has-icon" v-for="formInput in formInputs">
-      <template v-if="formInput.type === 'select'" v-model="formValues[formInput.id]">
+      <template v-if="formInput.type === 'select'">
           <span class="select is-fullwidth">
-            <select>
+            <select v-model="formValues[formInput.id]">
+              <option :value="undefined">{{formInput.label}}</option>
               <option v-for="option in formInput.options">
                 {{ option.label }}
               </option>
@@ -18,13 +19,15 @@
       </template>
 
       <template v-else>
-        <template v-if="formInput.type === 'textarea'" v-model="formValues[formInput.id]">
-          <textarea class="textarea input" type="textarea" :placeholder="formInput.label">
-          </textarea>
+        <template v-if="formInput.type === 'textarea'">
+          <textarea class="textarea input"
+            type="textarea"
+            :placeholder="formInput.label"
+            v-model="formValues[formInput.id]"></textarea>
           <i :class="formInput.icon" class="fa" aria-hidden="true"></i>
         </template>
         <template v-else>
-          <input class="input" :placeholder="formInput.label" v-model="formValues[input.id]">
+          <input class="input" :placeholder="formInput.label" v-model="formValues[formInput.id]">
           <i :class="formInput.icon" class="fa" aria-hidden="true"></i>
         </template>
       </template>
@@ -80,7 +83,7 @@ export default {
     return {
       apiUrl,
       formInputs: [],
-      formValues: [],
+      formValues: {},
     };
   },
 
